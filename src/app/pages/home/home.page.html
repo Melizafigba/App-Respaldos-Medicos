@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-toolbar class="contigo">
+
+    <ion-buttons slot="start">
+      <ion-button color="light" (click)="logout()">
+        <ion-icon slot="icon-only" name="exit-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+    <ion-buttons slot="end">
+      <ion-button color="light" routerLink="/usuario">
+        <ion-icon slot="icon-only" name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Bienvenido</ion-title>
+
+  </ion-toolbar>
+  
+
+<!--  <ion-img src="./assets/images/banner.png"></ion-img>-->
+</ion-header>
+<div>    
+  <div>  
+    <br>     
+</div>
+</div>
+
+<ion-content>
+  <!--<div id="center">
+    <img src="assets/images/logo2.png">
+  </div>-->
+  <img id="center" class="banner" src="assets/images/perfil.png">
+   
+  <ion-item class="ion-margin-top" *ngFor="let hijo of hijos" button (click)="goProfile(hijo)" detail>
+    <ion-icon slot="start" name="person"></ion-icon>
+    <ion-label>
+      {{hijo.nombre}} {{hijo.apellido}} <!-- {{hijo.rut}}  = rut => desglosar por el rut => consulta con la info-->
+    </ion-label>
+  </ion-item>
+  <!--Para agregar un nuevo perfil debe darle al boton agregar e ingresa el rut del niño , luego se hace una busqueda interna y 
+    si cumple el rut del hijo que pertenece al papá se agrega un nuevo perfil con el nombre del niño, se creara 10 perfiles que estaran ocultos y se habilitaran segun 
+  el match que se haga en el buscador con el  rut , si se encuentra se habilita el nuevo perfil -->
+
+
+  
+  <ion-button routerLink="/agenda" class="ion-margin-top fade" expand="block">Reserva tu hora <ion-icon slot="start" name="calendar-number"></ion-icon></ion-button>
+
+
+<!--usuario podra agregar a su hijo , se valida a traves de la bbdd que el hijo pertenezca al padre a traves del rut ingresado por la aplicacion de escritorio-->
+</ion-content>

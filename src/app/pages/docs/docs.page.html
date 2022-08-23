@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-toolbar class="contigo">
+
+    <ion-buttons slot="start">
+      <ion-button color="light" routerLink="/home">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+      <ion-title> Documentos </ion-title>
+
+  </ion-toolbar>
+ <!-- <ion-img src="./assets/images/banner.png"></ion-img>-->
+</ion-header>
+<ion-content>
+
+  <ion-button class="ion-margin-top fade " expand="block" (click)="tomarFoto()">Subir Foto
+    <ion-icon  name="camera" slot="end"></ion-icon>
+  </ion-button>
+
+  <ion-button class="ion-margin-top fade" expand="block" (click)="scan()">Escanea 
+    <ion-icon  name="scan" slot="end"></ion-icon>
+  </ion-button>
+  <ion-label>{{texto}}</ion-label>
+
+  <ion-label class="photo">
+    <ion-img  [src]="ruta"  alt="_"></ion-img>
+  </ion-label>
+  
+</ion-content>

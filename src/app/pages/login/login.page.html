@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar class="contigo">
+    <ion-title>Login</ion-title>
+      </ion-toolbar> 
+    <!--  <ion-img src="./assets/images/banner.png"></ion-img> -->
+</ion-header>
+<div>    
+  <div>  
+    <br>     
+</div>
+</div>
+
+<ion-content class="ion-margin">
+<!--<div id="center">-->
+  <img id="center" class="banner" src="assets/images/banner1.png">
+<!--</div>-->
+    
+  <ion-item>    
+    <ion-label position="floating">Rut</ion-label>
+    <ion-input [(ngModel)]="rut"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="contrasena"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" class="ion-margin fade" (click)="login()">
+      Ingresar 
+      <ion-icon name="finger-print" class="ion-margin-start"></ion-icon>
+    </ion-button>
+<!--
+  <ion-button expand="block" class="ion-margin contigo" routerLink="/restablecer">
+     Recuperar Contraseña 
+     <ion-icon name="keypad" class="ion-margin-start"></ion-icon>
+    </ion-button>
+  -->
+</ion-content>

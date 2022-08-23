@@ -1,0 +1,57 @@
+<ion-header>
+
+  <ion-toolbar class="contigo">
+
+    <ion-buttons slot="start">
+      <ion-button color="light" routerLink="/home">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+      <ion-title> Ficha Medica </ion-title>
+
+  </ion-toolbar>
+ <!-- <ion-img src="./assets/images/banner.png"></ion-img>-->
+
+</ion-header>
+
+<ion-content>
+
+  <ion-item >
+    <ion-label>
+      <ion-icon name="people"></ion-icon>
+      {{datoshijos.nombre}} {{datoshijos.apellido}} 
+      <!-- caputar nombre de hijo--> 
+    </ion-label>
+  </ion-item>
+
+<ion-list>
+
+  <ion-item>
+    <ion-label>Género</ion-label>
+    <ion-note slot="end">{{datoshijos.sexo}}</ion-note>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Fecha de Nacimiento</ion-label>
+    <ion-note slot="end">{{datoshijos.fecha_nac}} </ion-note>
+  </ion-item>
+<!-- caputar dato requerido -->
+  <ion-item>
+    <ion-label>Peso</ion-label>
+    <ion-note slot="end">{{datoshijos.peso}} kg</ion-note>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Estatura</ion-label>
+    <ion-note slot="end">{{datoshijos.estatura}} cm</ion-note>
+  </ion-item>
+  
+</ion-list>
+
+<ion-button expand="block" class="ion-margin fade" routerLink="/docs">
+  Documentos 
+  <ion-icon name="clipboard" class="ion-margin-start"></ion-icon>
+</ion-button>
+
+</ion-content>
